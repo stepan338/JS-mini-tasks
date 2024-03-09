@@ -6,9 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS mini-tasks</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/index.css">
+
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="login__form">
+      <div class="login__form-wrapper">
+        <div class="login__form-header">
+          <h3>Вход</h3>
+        </div>
+        <div class="email__wrapper">
+          <label class="email__field">
+            <span class="email__field-description">Email</span>
+            <input type="email" name="email__input" id="email__field-input" class="email__field-input"
+              placeholder="Введите email" autocomplete="off">
+            <div id="email__error" class="error"></div>
+          </label>
+        </div>
+        <div class="password__wrapper">
+          <label class="password__field">
+            <span class="password__field-description" id="password__field-description">Пароль</span>
+            <input type="password" name="password__input" id="password__field-input" class="password__field-input"
+              placeholder="Введите пароль">
+            <div id="password__error" class="error"></div>
+          </label>
+        </div>
+        <label class="checkbox__wrapper">
+          <div class="checkbox__field">
+            <input type="checkbox" name="updateOnEmail" id="checkbox__field">
+            <span></span>
+            Я согласен получать обновления на почту
+          </div>
+          <div id="checkbox__error" class="error"></div>
+        </label>
+        <div class="button__wrapper">
+          <label class="login__button">
+            <button type="submit" id="login__button" class="login__button-submit" >Войти</button>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="./src/index.js"></script>
 

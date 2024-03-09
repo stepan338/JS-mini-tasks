@@ -1,0 +1,271 @@
+.container {
+  position: relative;
+  width: 1440px;
+  height: 769px;
+  margin: 0 auto;
+  background-color: #1B2473;
+}
+
+.login__form {
+  position: absolute;
+  width: 600px;
+  min-height: 412px;
+  left: 412px;
+  top: 82px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+  background-color: #FFFFFF;
+  user-select: none;
+}
+
+.login__form-wrapper {
+  padding: 26px 45px;
+}
+
+.login__form-header {
+  width: 115px;
+  height: 50px;
+  margin: 0 auto;
+  color: #787878;
+  font-family: Roboto, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.email__field-description {
+  display: block;
+  width: 40px;
+  height: 16px;
+  margin-top: 17px;
+  margin-left: 8px;
+  color: #787878;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.email__field-input {
+  width: 509px;
+  height: 49px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: 2px solid #787878;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #787878;
+  font-family: Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-left: 15px;
+}
+
+.password__field-description {
+  display: block;
+  width: 40px;
+  height: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+  color: #787878;
+  ;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.password__field-input {
+  width: 509px;
+  height: 49px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: 2px solid #787878;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #787878;
+  font-family: Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  padding-left: 15px;
+}
+
+.email__field-input::placeholder,
+.password__field-input::placeholder {
+  color: #CCCCCC;
+}
+
+.checkbox__field {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  width: 509px;
+  gap: 10px;
+  color: #787878;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* скрываем обычный type="checkbox" */
+.checkbox__field>input {
+  position: absolute;
+  /* z-index: -1; */
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/*создаем custom checkbox */
+/* создание в label псевдоэлемента before со следующими стилями */
+.checkbox__field>span::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border: 2px solid #787878;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+}
+
+/* стили при наведении курсора на checkbox */
+.checkbox__field>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #1A226B;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.checkbox__field>input:not(:disabled):active+span::before {
+  border-color: #1A226B;
+  background-color: #1A226B;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.checkbox__field>input:focus+span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.checkbox__field>input:focus:not(:checked)+span::before {
+  border-color: #1A226B;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.checkbox__field>input:checked+span::before {
+  border-color: #1A226B;
+  background-color: #1A226B;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.checkbox__field>input:disabled+span::before {
+  background-color: #e9ecef;
+}
+
+.email__field-input-error,
+.password__field-input-error,
+.checkbox__field-error {
+  border-color: red;
+  background-color: rgb(255, 0, 0, 0.5);
+  border-radius: 7px;
+  color: red;
+}
+
+.email__field-input-error::placeholder,
+.password__field-input-error::placeholder {
+  color: red;
+}
+
+#email__error,
+#password__error,
+#checkbox__error {
+  margin: 5px;
+  color: red
+}
+
+.login__button-submit {
+  width: 180px;
+  height: 52px;
+  margin-top: 52px;
+  margin-left: 165px;
+  border-radius: 10px;
+  background-color: #1A226B;
+  color: #FFFFFF;
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.login__button-submit:hover {
+  background-color: #394188;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 768px;
+    height: 737px;
+  }
+
+  .login__form {
+    width: 728px;
+    min-height: 697px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .login__form-header {
+    width: 138px;
+    margin-top: 38px;
+    margin-left: 288px;
+    font-size: 60px;
+  }
+
+  .email__field-description {
+    width: 60px;
+    margin-top: 13px;
+    font-size: 24px;
+  }
+
+  .email__field-input {
+    width: 638px;
+    font-size: 28px;
+  }
+
+  .password__field-description {
+    width: 84px;
+    margin-top: 13px;
+    font-size: 24px;
+  }
+
+  .password__field-input {
+    width: 638px;
+  }
+
+  .checkbox__field {
+    margin-top: 19px;
+    width: 638px;
+  }
+
+  .checkbox__field>span::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .checkbox__field>p {
+    font-size: 18px;
+  }
+
+  .login__button-submit {
+    width: 220px;
+    height: 80px;
+    margin-top: 64px;
+    margin-left: 254px;
+    font-size: 32px;
+  }
+}

@@ -1,1 +1,1 @@
-import *as fetch from './06_fetch.js';
+import { filingCheck } from './07_forms.js'
