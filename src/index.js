@@ -1,1 +1,1 @@
-import *as methods from './05_methods.js';
+import *as fetch from './06_fetch.js';
