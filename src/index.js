@@ -1,1 +1,1 @@
-import *as function from './03_function.js';
+import *as methods from './05_methods.js';
