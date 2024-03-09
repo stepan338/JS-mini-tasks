@@ -1,1 +1,1 @@
-import *as prompt from './02_prompt.js';
+import *as function from './03_function.js';
