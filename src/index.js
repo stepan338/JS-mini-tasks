@@ -1,1 +1,1 @@
-import *as variables from './01_variables.js';
+import *as prompt from './02_prompt.js';
