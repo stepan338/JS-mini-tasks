@@ -30,7 +30,7 @@ function randomFunction(arg) {
     console.log('Аргумент не является строкой');
     return;
   }
-  
+
   arg = arg.trim();
 
   if (arg.length > 30) {
