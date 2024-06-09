@@ -1,1 +1,1 @@
-import *as function from './03_function.js';
+import *as mini_game from './04_mini_game.js';
